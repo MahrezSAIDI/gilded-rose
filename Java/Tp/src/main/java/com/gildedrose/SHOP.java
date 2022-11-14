@@ -10,14 +10,14 @@ public class SHOP {
 		items=new ArrayList<Item>();
 	}
 	
-	public void addItem(Item item){
+	public void addItemToShop(Item item){
 		items.add(item);
 	}
 	public void upDateQualityItems(ArrayList <Item> items) {
 		
 		for( int i=0; i < items.size();i++ ) {
 			Item item=items.get(i);
-			item.upDateQuality(item);
+			item.upDateQualityItem(item);
 			
 		}
 	}

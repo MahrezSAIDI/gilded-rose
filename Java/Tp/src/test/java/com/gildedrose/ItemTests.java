@@ -21,60 +21,60 @@ public class ItemTests
 	
 	
 	@Test
-	public void testGetSellIn() {
-		assertEquals(9,item.getSellIn());
+	public void getSellInItemTest() {
+		assertEquals(9,item.getSellInItem());
 	}
 	
 	@Test
-	public void testGetQuality() {
-		assertEquals(8,item.getQuality());
+	public void getQualityItemTest() {
+		assertEquals(8,item.getQualityItem());
 	}
 	
 	@Test
-	public void testGetNameItem() {
+	public void getNameItemTest() {
 		assertEquals("PC",item.getNameItem());
 	}
 	
 	@Test
-	public void setQualityTest() {
-		item.setQuality(-2);
-		int  qualityAfterSet=item.getQuality();
-		assertEquals(6,qualityAfterSet);
+	public void setQualityItemTest() {
+		item.setQualityItem(-2);
+		int  qualityAfterSetItem=item.getQualityItem();
+		assertEquals(6,qualityAfterSetItem);
 	}
 	
 	@Test
-	public void testUpDateQuality() {
-		item.upDateQuality(item);
-		int itemSellinAfterUpDate=item.getQuality();
+	public void UpDateQualityItemTest() {
+		item.upDateQualityItem(item);
+		int itemSellinAfterUpDate=item.getQualityItem();
 		
-		item2.upDateQuality(item2);
-		int itemSellinAfterUpDate2=item2.getQuality();
+		item2.upDateQualityItem(item2);
+		int itemSellinAfterUpDate2=item2.getQualityItem();
 		
-		item3.upDateQuality(item3);
-		int itemSellinAfterUpDate3=item3.getQuality();
+		item3.upDateQualityItem(item3);
+		int itemSellinAfterUpDate3=item3.getQualityItem();
 		
-		item4.upDateQuality(item4);
-		int itemSellinAfterUpDate4=item4.getQuality();
+		item4.upDateQualityItem(item4);
+		int itemSellinAfterUpDate4=item4.getQualityItem();
 		
-		item5.upDateQuality(item5);
-		int itemSellinAfterUpDate5=item5.getQuality();
+		item5.upDateQualityItem(item5);
+		int itemSellinAfterUpDate5=item5.getQualityItem();
 		
-		item6.upDateQuality(item6);
-		int itemSellinAfterUpDate6=item6.getQuality();
+		item6.upDateQualityItem(item6);
+		int itemSellinAfterUpDate6=item6.getQualityItem();
 		
 		
-		item7.upDateQuality(item7);
-		int itemSellinAfterUpDate7=item7.getQuality();
+		item7.upDateQualityItem(item7);
+		int itemSellinAfterUpDate7=item7.getQualityItem();
 	
 		
-		item8.upDateQuality(item8);
-		int itemSellinAfterUpDate8=item8.getQuality();
+		item8.upDateQualityItem(item8);
+		int itemSellinAfterUpDate8=item8.getQualityItem();
 		
-		item9.upDateQuality(item9);
-		int itemSellinAfterUpDate9=item9.getQuality();
+		item9.upDateQualityItem(item9);
+		int itemSellinAfterUpDate9=item9.getQualityItem();
 		
-		item9.upDateQuality(item10);
-		int itemSellinAfterUpDate10=item10.getQuality();
+		item9.upDateQualityItem(item10);
+		int itemSellinAfterUpDate10=item10.getQualityItem();
 		
 		
 		assertEquals(8,itemSellinAfterUpDate);
