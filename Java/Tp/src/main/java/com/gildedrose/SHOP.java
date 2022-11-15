@@ -13,7 +13,7 @@ public class SHOP {
 	public void addItemToShop(Item item){
 		items.add(item);
 	}
-	public void upDateQualityItems(ArrayList <Item> items) {
+	public void upDateQuality(ArrayList <Item> items) {
 		
 		for( int i=0; i < items.size();i++ ) {
 			Item item=items.get(i);

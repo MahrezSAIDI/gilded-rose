@@ -41,7 +41,7 @@ public class ShopTests
 		items.add(item10);
 		
 		int qualityBeforeUpDate = items.get(0).getQualityItem();
-		shop.upDateQualityItems(items);
+		shop.upDateQuality(items);
 		int qualityAfterUpDate=items.get(0).getQualityItem();
 		assertEquals(qualityBeforeUpDate,8);
 		assertEquals(qualityAfterUpDate,8);

@@ -40,39 +40,71 @@ public class Item {
 		this.qualityItem=qualityItem+number;
 	}
 	
-	public void upDateQualityItem(Item item) {
-		
-		if (((item.getNameItem() !="Backstage") && (item.getNameItem() !="Aged Brie"))&&(item.getSellInItem() == 0)) {
+	
+	public void upDateItemWhenSellInIsZero(Item item) {
+		int sellInItem = item.getSellInItem();
+		String nameItem =item.getNameItem();
+		if (((nameItem !="Backstage") && (nameItem !="Aged Brie"))&&(sellInItem == 0)) {
 			//item.quality=quality-2 ;
 			item.setQualityItem(-2);
 		}
-		if (item.getNameItem()=="Sulfuras") {
+		
+	}
+	
+	public void upDateItemWhenIsSulfuras(Item item) {
+		String nameItem =item.getNameItem();
+		if (nameItem=="Sulfuras") {
 			//item.quality=quality;
 			item.setQualityItem(0);
 		}
 		
-		if((item.getNameItem()=="Backstage") || (item.getNameItem()=="Aged Brie"))
+	}
+	
+	public void upDateWhenBackstageOrAgedBrie(Item item) {
+		
+		int sellInItem = item.getSellInItem();
+		String nameItem =item.getNameItem();
+		
+		if((nameItem=="Backstage") || (nameItem=="Aged Brie"))
 		{
-			int remainingDaysSellInItem=item.getSellInItem();
-			
-			if((remainingDaysSellInItem <=10) && (remainingDaysSellInItem >5 )){
+				if((sellInItem <=10) && (sellInItem >5 )){
 				//item.quality=quality+2;
 				item.setQualityItem(2);
 			}
-			if ((remainingDaysSellInItem <=5) && (remainingDaysSellInItem >0 )) {
+			if ((sellInItem <=5) && (sellInItem >0 )) {
 				//item.quality=quality+3;
 				item.setQualityItem(3);
 			}
-			if (remainingDaysSellInItem == 0) {
+			if (sellInItem == 0) {
 				//item.quality=0;
 				item.setQualityItem(-item.getQualityItem());
 			}
 		
 		
 		}
-		if (item.getNameItem()=="Conjured")
-				{item.setQualityItem(-2);
+	}
+	
+	public void upDateItemWhenIsConjured(Item item) {
+		String nameItem =item.getNameItem();
+		
+		if (nameItem=="Conjured") {
 			
-				}
-}
+			item.setQualityItem(-2);
+	
+		}
+		
+	}
+	
+	
+	
+	
+	public void upDateQualityItem(Item item) {
+		
+		upDateItemWhenSellInIsZero(item) ;
+		upDateItemWhenIsSulfuras(item);
+		upDateWhenBackstageOrAgedBrie(item);
+		upDateItemWhenIsConjured(item); 
+		
+		
+		}
 }
