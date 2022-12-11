@@ -8,6 +8,14 @@ public class Item {
 	//public Date dateOfFabrication; 
 	//public Date dateLimitConsommation;
 	
+
+	/**
+	* Returns an Item object with its quality , its sellin and its name
+	* @param  theSellin the price
+	* @param  theQuality the amount of quality
+	* @param  theNameItem the name of the item
+	* @return      the image at the specified URL
+	*/
 	public Item(int theSellIn, int theQuality, String theNameItem) {
 		this.sellInItem=theSellIn;
 		this.qualityItem=theQuality;
